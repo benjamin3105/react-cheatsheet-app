@@ -39,21 +39,21 @@ export default function Sidebar() {
           </MenuItem>
         </Link>
 
-        <Link to="usestate">
+        <Link to="usecontext">
           <MenuItem>
             <ListItemIcon>
               <ChevronRight fontSize="small" />
             </ListItemIcon>
-            <ListItemText>useRef</ListItemText>
+            <ListItemText>useContext</ListItemText>
           </MenuItem>
         </Link>
 
-        <Link to="usestate">
+        <Link to="usereducer">
           <MenuItem>
             <ListItemIcon>
               <ChevronRight fontSize="small" />
             </ListItemIcon>
-            <ListItemText>useState</ListItemText>
+            <ListItemText>useReducer</ListItemText>
           </MenuItem>
         </Link>
 

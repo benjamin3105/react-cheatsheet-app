@@ -14,7 +14,7 @@ export default function UseEffect() {
 		if(count <= 0) {
 			setCount(0)
 		}
-	})
+	}, [count])
 
 	const codeString = 'const [count, setCount] = useState(0)\r\n\r\nuseEffect(() => {\r\n\tconsole.log(count)\r\n\tif(count <= 0) {\r\n\t\tsetCount(0)\r\n\t}\r\n})';
 	
