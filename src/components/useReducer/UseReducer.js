@@ -1,26 +1,29 @@
 import React from 'react'
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react'
 
-const initialState = {count: 0};
+const initialState = {count: 0}
+
+const ACTION_TYPE = {
+
+}
 
 function reducer(state, action) {
-  switch (action.type) {
-    case 'increment':
-      return {count: state.count + 1};
-    case 'decrement':
-      return {count: state.count - 1};
-    default:
-      throw new Error();
-  }
+
 }
 
 export default function UseReducer() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [todos, dispatch] = useReducer(reducer, [])
+  const [name, setName] = useState('')
+
+  function handleSubmit(e) {
+    console.log(e.target.value)
+  }
+
   return (
     <>
-      Count: {state.count}
-      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={name} onChange={e => setName(e.target.value)}/>
+      </form>
     </>
   )
 }
